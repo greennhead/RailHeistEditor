@@ -12,9 +12,11 @@ I in no way own UFO 50 or any of these assets.
 - Minus - Zoom out
 
 ## Usage:
-Of Patch:
+
+### Of Patch:
 - Patch your UFO 50 data.win using XDelta patcher. Rail heist should now have a "custom levels" tab. This will load all levels from AppData/Local/ufo50/RailHeistLevels
-Of Editor:
+- 
+### Of Editor:
 - Launch RailHeistEditor.exe
 - Left click to place tiles, right click to erase them.
 
