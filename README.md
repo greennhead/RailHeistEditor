@@ -25,6 +25,7 @@ I in no way own UFO 50 or any of these assets.
 - Some objects are in wrong places ingame (if found, please report which ones and how far off they are)
 - Rarely you can put 2 tiles in one spot which can weird up the level data
 - Having both no casualties and all lawmen killed will have a weird string at the end of the level.
+- Barebones enough levels can sometimes crash from rail heist not knowing how to put the background tiles
 
 ## Credits:
 - Mossmouth - UFO 50
