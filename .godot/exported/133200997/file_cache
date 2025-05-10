@@ -1,0 +1,7 @@
+res://nodes/background.tscn::82a6871ab89963d29c457bbcfbba3696::1746906688::res://.godot/exported/133200997/export-668c1a0137124123b7a27815f949c8cf-background.scn
+res://nodes/block_node.tscn::41a3c4eaea646c67c7c3af8791ec9d2d::1746906688::res://.godot/exported/133200997/export-9604eb832d4c037c6d597d4b2b3defcb-block_node.scn
+res://nodes/editor.tscn::64910cabae2c1b8e2770c8e82948d3fd::1746906746::res://.godot/exported/133200997/export-6c993c7f8303cc8ffe46213b331c643f-editor.scn
+res://nodes/main_menu.tscn::86bda89fb334812aca390cec81f73b7e::1746906687::res://.godot/exported/133200997/export-ed3b879d108f5609f09a78be05dc30f7-main_menu.scn
+res://resources/floor.tres::119ea5c7b7bf44007348342a2d7c58f0::1746779363::res://.godot/exported/133200997/export-e000f3e2fdbee532c0f78226bada8f4f-floor.res
+res://resources/theme_defaultfont.tres::a268811c96c118a967fbc49ecc2aadea::1746905801::res://.godot/exported/133200997/export-5ac0139038c2213a38219bf951025881-theme_defaultfont.res
+res://gametheme.tres::c9c26c2177ee8142714b2542014e19ec::1746905801::res://.godot/exported/133200997/export-d74bf521153891eb48ef10b6d4f41362-gametheme.res

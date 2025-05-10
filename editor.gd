@@ -311,7 +311,7 @@ func getTile(symbol,pos):
 			a.symbol = i.symbol
 			add_child(a)
 			got = true
-	if got == false && symbol != " ":
+	if got == false && symbol != " " && symbol != "E":
 		var a = block_node.instantiate()
 		a.position = pos
 		a.get_child(0).texture = noSprite
@@ -323,7 +323,7 @@ func loadMap(data):
 	for i in data.size():
 		off = i * (48*16)
 		print(off)
-		placer.position = Vector2(56+off,-32)
+		placer.position = Vector2(56+off,-32-(16*2))
 		for j in data[i].length():
 			if data[i][j] != "Ф":
 				getTile(data[i][j],placer.position)

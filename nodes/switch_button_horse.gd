@@ -6,12 +6,17 @@ var currVar = 0
 var a  = 0
 func _ready() -> void:
 	text = outcomes[0]
+
 func upd(curr):
-	for i in outcomeVars.size():
-		if i == curr:
-			currVar = curr
-			a = i
-			text = outcomes[i]
+	var idx = 0
+	for i in outcomeVars:
+		if curr == i:
+			a = idx
+			text = outcomes[a]
+			currVar = outcomeVars[a]
+		idx += 1
+
+
 func _process(delta: float) -> void:
 	if button_pressed:
 		button_pressed = false

@@ -2,9 +2,7 @@ res://nodes/editor.tscn
 res://gametheme.tres
 res://resources/theme_defaultfont.tres
 res://editor.gd
-res://resources/item.gd
 res://nodes/main_menu.tscn
 res://nodes/block_node.tscn
 res://nodes/background.tscn
-res://nodes/block_node.gd
 res://nodes/switch_button_horse.gd
