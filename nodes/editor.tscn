@@ -1,0 +1,1145 @@
+[gd_scene load_steps=145 format=3 uid="uid://brtv8p88vrwrk"]
+
+[ext_resource type="Script" uid="uid://dh4m6o5k6phc7" path="res://editor.gd" id="1_vxwf6"]
+[ext_resource type="Script" uid="uid://bnjtwuhcjm2yd" path="res://resources/item.gd" id="2_iy8ku"]
+[ext_resource type="PackedScene" uid="uid://c16i087qtk46" path="res://nodes/background.tscn" id="2_jauyc"]
+[ext_resource type="Resource" uid="uid://b752xu305621w" path="res://resources/floor.tres" id="3_22aig"]
+[ext_resource type="Texture2D" uid="uid://5hseaobnfetw" path="res://RailHeistSprites/s13_FloorStud_2.png" id="3_jauyc"]
+[ext_resource type="Texture2D" uid="uid://nocrkm88kxox" path="res://RailHeistSprites/s13_Floor_0.png" id="3_xfh8a"]
+[ext_resource type="Texture2D" uid="uid://p2w71wlh8ham" path="res://EditorSprites/tile.png" id="4_0w46s"]
+[ext_resource type="Texture2D" uid="uid://ioqf4sm34bjh" path="res://RailHeistSprites/s13_FloorVert_0.png" id="4_ouj6d"]
+[ext_resource type="Texture2D" uid="uid://to7be0x8m7t4" path="res://RailHeistSprites/s13_FloorStud_0.png" id="5_cuvql"]
+[ext_resource type="FontFile" uid="uid://dy4bbwefcwhsp" path="res://fonts/grimsoneFont.png" id="5_sygvd"]
+[ext_resource type="Texture2D" uid="uid://crkem3wqlvajb" path="res://RailHeistSprites/s13_JumpThru_0.png" id="6_ouj6d"]
+[ext_resource type="Texture2D" uid="uid://d0q07pea1cp8l" path="res://RailHeistSprites/s13_Ladder_0.png" id="7_cuvql"]
+[ext_resource type="Texture2D" uid="uid://cuxunhlovs5im" path="res://RailHeistSprites/LadderWithTop.png" id="8_cuvql"]
+[ext_resource type="Texture2D" uid="uid://pljujmiptytm" path="res://RailHeistSprites/s13_Gear_0.png" id="9_cnpvj"]
+[ext_resource type="Texture2D" uid="uid://c0c63ydthcovu" path="res://RailHeistSprites/s13_Gear_2.png" id="10_qdd8a"]
+[ext_resource type="Texture2D" uid="uid://bji8uifvfgin0" path="res://RailHeistSprites/s13_Switch_0.png" id="11_jdf7r"]
+[ext_resource type="Texture2D" uid="uid://b2uf68icbyqeg" path="res://RailHeistSprites/s13_SwitchWall_0.png" id="12_t2bv3"]
+[ext_resource type="Theme" uid="uid://bcxe8gku6dbf3" path="res://gametheme.tres" id="13_22aig"]
+[ext_resource type="Theme" uid="uid://dv33hiumcihsm" path="res://resources/theme_defaultfont.tres" id="13_idxgr"]
+[ext_resource type="Texture2D" uid="uid://drn2kv0fp60fb" path="res://RailHeistSprites/trainWheels.png" id="13_re3rl"]
+[ext_resource type="Texture2D" uid="uid://ddbqwb8y3assi" path="res://RailHeistSprites/s13_Dodger_0.png" id="13_tapub"]
+[ext_resource type="FontFile" uid="uid://cgosakgflinjm" path="res://fonts/defaultFont.png" id="14_idxgr"]
+[ext_resource type="Texture2D" uid="uid://c0g3tvyo35xxe" path="res://RailHeistSprites/s13_Brand_0.png" id="14_re3rl"]
+[ext_resource type="Script" uid="uid://c36bla40c53f2" path="res://nodes/itembutton.gd" id="15_2iahy"]
+[ext_resource type="Texture2D" uid="uid://c3ri3ocfcaohe" path="res://RailHeistSprites/s13_Maria_0.png" id="15_kxdl6"]
+[ext_resource type="Texture2D" uid="uid://di4tbj6u8nro1" path="res://RailHeistSprites/s13_BrandCaptured_0.png" id="16_ye1uj"]
+[ext_resource type="Texture2D" uid="uid://dhi1kwt3m64te" path="res://RailHeistSprites/s13_OfficerL_1.png" id="18_qogpg"]
+[ext_resource type="Texture2D" uid="uid://d1tpo51wk5cbt" path="res://RailHeistSprites/s13_Officer_1.png" id="19_n6ela"]
+[ext_resource type="Texture2D" uid="uid://blb11hf04osqo" path="res://RailHeistSprites/s13_OfficerL_0.png" id="20_1yidu"]
+[ext_resource type="Texture2D" uid="uid://d0ybcgsr7uet4" path="res://RailHeistSprites/s13_Officer_0.png" id="21_alnvj"]
+[ext_resource type="Texture2D" uid="uid://dkhj5ei3eiflx" path="res://RailHeistSprites/s13_OfficerL_2.png" id="22_glggu"]
+[ext_resource type="Script" uid="uid://b4h0kqpmi0li1" path="res://nodes/switch_button_horse.gd" id="22_tapub"]
+[ext_resource type="Texture2D" uid="uid://cmadsidbx1kyg" path="res://RailHeistSprites/s13_Officer_2.png" id="23_fj2ah"]
+[ext_resource type="Texture2D" uid="uid://dbtbaa0bpi7wv" path="res://RailHeistSprites/s13_OfficerL_15.png" id="24_7e2i3"]
+[ext_resource type="Texture2D" uid="uid://rae3xh35lp7q" path="res://RailHeistSprites/s13_Officer_15.png" id="25_lmkdr"]
+[ext_resource type="Texture2D" uid="uid://beis4wf4bsic4" path="res://RailHeistSprites/s13_OfficerL_16.png" id="26_n4oqg"]
+[ext_resource type="Texture2D" uid="uid://uknn00jpr7cg" path="res://RailHeistSprites/s13_Officer_16.png" id="27_wf06u"]
+[ext_resource type="Texture2D" uid="uid://2hcg72ff1ltw" path="res://RailHeistSprites/OfficerNoClimbL.png" id="28_3obmn"]
+[ext_resource type="Texture2D" uid="uid://c7dbe5hl6oh7n" path="res://RailHeistSprites/OfficerNoClimb.png" id="29_snapv"]
+[ext_resource type="Texture2D" uid="uid://dxqolqomog61s" path="res://RailHeistSprites/OfficerShielfL.png" id="30_yg12c"]
+[ext_resource type="Texture2D" uid="uid://cr4ot0k471axb" path="res://RailHeistSprites/OfficerShielf.png" id="31_cwnb3"]
+[ext_resource type="Texture2D" uid="uid://6c8mairdkbck" path="res://RailHeistSprites/OfficerPatrolTNTL.png" id="32_g6211"]
+[ext_resource type="Texture2D" uid="uid://ducsfiuacr7sf" path="res://RailHeistSprites/OfficerPatrolTNT.png" id="33_qm3ai"]
+[ext_resource type="Texture2D" uid="uid://c1qcs5chw345q" path="res://RailHeistSprites/OfficerTNTL.png" id="34_08srj"]
+[ext_resource type="Texture2D" uid="uid://crqi1k0fq4e2l" path="res://RailHeistSprites/OfficerTNT.png" id="35_ybnyc"]
+[ext_resource type="Texture2D" uid="uid://c0ccy74o5e33m" path="res://RailHeistSprites/s13_SheriffL_1.png" id="36_2cpkg"]
+[ext_resource type="Texture2D" uid="uid://bqepshpxk5vu8" path="res://RailHeistSprites/s13_Sheriff_1.png" id="37_vmd2y"]
+[ext_resource type="Texture2D" uid="uid://c6awjlqxk0c35" path="res://RailHeistSprites/s13_SheriffL_0.png" id="38_v3ucb"]
+[ext_resource type="Texture2D" uid="uid://1nkv8uqluu0l" path="res://RailHeistSprites/s13_Sheriff_0.png" id="39_fgk53"]
+[ext_resource type="Texture2D" uid="uid://c08hbhupeamc1" path="res://RailHeistSprites/s13_CinderBlock_0.png" id="40_wf06u"]
+[ext_resource type="Texture2D" uid="uid://1kny2jvpqgnb" path="res://RailHeistSprites/s13_Dynamite_0.png" id="41_3obmn"]
+[ext_resource type="Texture2D" uid="uid://cy0pbi6ywgq56" path="res://RailHeistSprites/s13_GatlingGun_0.png" id="42_snapv"]
+[ext_resource type="Texture2D" uid="uid://kl8q6iopw7ts" path="res://RailHeistSprites/s13_GatlingGunL_0.png" id="43_yg12c"]
+[ext_resource type="Texture2D" uid="uid://cc11mrax50unw" path="res://RailHeistSprites/s13_GatlingGun_Officer.png" id="44_cwnb3"]
+[ext_resource type="Texture2D" uid="uid://yl4b6qewoyw6" path="res://RailHeistSprites/s13_GatlingGunL_Officer.png" id="45_g6211"]
+[ext_resource type="Texture2D" uid="uid://b6ihtqfvdae5w" path="res://RailHeistSprites/s13_Barrel_0.png" id="46_cwnb3"]
+[ext_resource type="Texture2D" uid="uid://ciksbokohegfu" path="res://RailHeistSprites/s13_Crate_0.png" id="47_g6211"]
+[ext_resource type="Texture2D" uid="uid://b2lij8htlg3up" path="res://RailHeistSprites/s13_CrateSecret_0.png" id="48_qm3ai"]
+[ext_resource type="Texture2D" uid="uid://ruv031afn4eu" path="res://RailHeistSprites/s13_PowerUpCrate_0.png" id="49_08srj"]
+[ext_resource type="Texture2D" uid="uid://wnk3jds2cr84" path="res://RailHeistSprites/s13_PowerUps_2.png" id="49_qm3ai"]
+[ext_resource type="Texture2D" uid="uid://ct5yxggbgp8h2" path="res://RailHeistSprites/s13_PowerUps_1.png" id="51_08srj"]
+[ext_resource type="Texture2D" uid="uid://cnbqha87nuxup" path="res://RailHeistSprites/s13_Horse_0.png" id="51_glggu"]
+[ext_resource type="Texture2D" uid="uid://cb3oebrtrfxiv" path="res://RailHeistSprites/s13_Horse_1.png" id="52_fj2ah"]
+[ext_resource type="Texture2D" uid="uid://chpg0ueg7upo5" path="res://RailHeistSprites/s13_PowerUps_3.png" id="52_vkp35"]
+[ext_resource type="Texture2D" uid="uid://cci2g2lsqyk2j" path="res://RailHeistSprites/s13_PowerUps_4.png" id="53_4vnqq"]
+[ext_resource type="Texture2D" uid="uid://die7lqlpakl3g" path="res://RailHeistSprites/s13_Horse_2.png" id="53_7e2i3"]
+[ext_resource type="Texture2D" uid="uid://b6wojcbxqcvje" path="res://RailHeistSprites/s13_Horse_3.png" id="54_lmkdr"]
+[ext_resource type="Texture2D" uid="uid://ca4ho4u8dwjo3" path="res://RailHeistSprites/s13_PowerUps_5.png" id="54_lt4c8"]
+[ext_resource type="Texture2D" uid="uid://bpq4cdbpir5v3" path="res://RailHeistSprites/s13_PowerUps_6.png" id="55_0v3hb"]
+[ext_resource type="Texture2D" uid="uid://bw5my20q0u3gs" path="res://RailHeistSprites/s13_PowerUps_7.png" id="56_ab65w"]
+[ext_resource type="Texture2D" uid="uid://ebu5tud5xqw3" path="res://RailHeistSprites/s13_MoneyBag_0.png" id="57_r4pd3"]
+[ext_resource type="Texture2D" uid="uid://be02ga6s6hjwq" path="res://RailHeistSprites/s13_Chicken_0.png" id="58_arh8e"]
+[ext_resource type="Texture2D" uid="uid://c3ykqhljoltkj" path="res://RailHeistSprites/s13_CowR_0.png" id="59_h4xq4"]
+[ext_resource type="Texture2D" uid="uid://18qsxe72yyqc" path="res://RailHeistSprites/s13_Cow_0.png" id="60_3ob4h"]
+[ext_resource type="Texture2D" uid="uid://be6idc874vemy" path="res://RailHeistSprites/s13_CowRandomL.png" id="61_0v3hb"]
+[ext_resource type="Texture2D" uid="uid://vm6544tem8qk" path="res://RailHeistSprites/s13_CowRandom.png" id="62_ab65w"]
+[ext_resource type="Texture2D" uid="uid://bm6515i4r1x4u" path="res://RailHeistSprites/RandomObject.png" id="63_r4pd3"]
+
+[sub_resource type="Resource" id="Resource_idxgr"]
+script = ExtResource("2_iy8ku")
+name = "Vertical Floor"
+symbol = "|"
+sprite = ExtResource("4_ouj6d")
+node = ""
+spriteOffset = Vector2(0, 0)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_2iahy"]
+script = ExtResource("2_iy8ku")
+name = "Floor Stud"
+symbol = "@"
+sprite = ExtResource("5_cuvql")
+node = ""
+spriteOffset = Vector2(0, 0)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_ycee4"]
+script = ExtResource("2_iy8ku")
+name = "Platform"
+symbol = "-"
+sprite = ExtResource("6_ouj6d")
+node = ""
+spriteOffset = Vector2(8, 0)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_jmeox"]
+script = ExtResource("2_iy8ku")
+name = "Ladder"
+symbol = "L"
+sprite = ExtResource("7_cuvql")
+node = ""
+spriteOffset = Vector2(0, 24)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_o3keb"]
+script = ExtResource("2_iy8ku")
+name = "Ladder (With Top)"
+symbol = "T"
+sprite = ExtResource("8_cuvql")
+node = ""
+spriteOffset = Vector2(0, 24)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_276cq"]
+script = ExtResource("2_iy8ku")
+name = "Gear"
+symbol = "%"
+sprite = ExtResource("9_cnpvj")
+node = ""
+spriteOffset = Vector2(0, 0)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_re3rl"]
+script = ExtResource("2_iy8ku")
+name = "BG Gear"
+symbol = "*"
+sprite = ExtResource("10_qdd8a")
+node = ""
+spriteOffset = Vector2(0, 0)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_ye1uj"]
+script = ExtResource("2_iy8ku")
+name = "Switch Wall"
+symbol = "F"
+sprite = ExtResource("12_t2bv3")
+node = ""
+spriteOffset = Vector2(0, 0)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_5xovq"]
+script = ExtResource("2_iy8ku")
+name = "Train Wheels"
+symbol = "8"
+sprite = ExtResource("13_re3rl")
+node = ""
+spriteOffset = Vector2(32, -6)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_o6ouu"]
+script = ExtResource("2_iy8ku")
+name = "Dodger"
+symbol = "x"
+sprite = ExtResource("13_tapub")
+node = ""
+spriteOffset = Vector2(0, -12)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_8c3sx"]
+script = ExtResource("2_iy8ku")
+name = "Brand"
+symbol = "y"
+sprite = ExtResource("14_re3rl")
+node = ""
+spriteOffset = Vector2(0, -12)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_yrxpm"]
+script = ExtResource("2_iy8ku")
+name = "Maria"
+symbol = "z"
+sprite = ExtResource("15_kxdl6")
+node = ""
+spriteOffset = Vector2(0, -12)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_opd0o"]
+script = ExtResource("2_iy8ku")
+name = "Brand (Captured)"
+symbol = "^"
+sprite = ExtResource("16_ye1uj")
+node = ""
+spriteOffset = Vector2(0, -12)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_mgvkx"]
+script = ExtResource("2_iy8ku")
+name = "Officer (Patrolling, left)"
+symbol = "a"
+sprite = ExtResource("18_qogpg")
+node = ""
+spriteOffset = Vector2(0, -12)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_vkp35"]
+script = ExtResource("2_iy8ku")
+name = "Officer (Patrolling, right)"
+symbol = "b"
+sprite = ExtResource("19_n6ela")
+node = ""
+spriteOffset = Vector2(0, -12)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_4vnqq"]
+script = ExtResource("2_iy8ku")
+name = "Officer (Left)"
+symbol = "c"
+sprite = ExtResource("20_1yidu")
+node = ""
+spriteOffset = Vector2(0, -12)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_lt4c8"]
+script = ExtResource("2_iy8ku")
+name = "Officer (Right)"
+symbol = "d"
+sprite = ExtResource("21_alnvj")
+node = ""
+spriteOffset = Vector2(0, -12)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_0v3hb"]
+script = ExtResource("2_iy8ku")
+name = "Officer (Crouching, left)"
+symbol = "e"
+sprite = ExtResource("22_glggu")
+node = ""
+spriteOffset = Vector2(0, -12)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_ab65w"]
+script = ExtResource("2_iy8ku")
+name = "Officer (Crouching, right)"
+symbol = "f"
+sprite = ExtResource("23_fj2ah")
+node = ""
+spriteOffset = Vector2(0, -12)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_r4pd3"]
+script = ExtResource("2_iy8ku")
+name = "Officer (Aiming up, left)"
+symbol = "g"
+sprite = ExtResource("24_7e2i3")
+node = ""
+spriteOffset = Vector2(0, -12)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_arh8e"]
+script = ExtResource("2_iy8ku")
+name = "Officer (Aiming up, right)"
+symbol = "h"
+sprite = ExtResource("25_lmkdr")
+node = ""
+spriteOffset = Vector2(0, -12)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_h4xq4"]
+script = ExtResource("2_iy8ku")
+name = "Officer (Aiming down, left)"
+symbol = "i"
+sprite = ExtResource("26_n4oqg")
+node = ""
+spriteOffset = Vector2(0, -12)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_3ob4h"]
+script = ExtResource("2_iy8ku")
+name = "Officer (Aiming down, right)"
+symbol = "j"
+sprite = ExtResource("27_wf06u")
+node = ""
+spriteOffset = Vector2(0, -12)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_atcyj"]
+script = ExtResource("2_iy8ku")
+name = "Officer (Patrolling, can't climb ladders, left)"
+symbol = "k"
+sprite = ExtResource("28_3obmn")
+node = ""
+spriteOffset = Vector2(0, -12)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_tebac"]
+script = ExtResource("2_iy8ku")
+name = "Officer (Patrolling, can't climb ladders, right)"
+symbol = "l"
+sprite = ExtResource("29_snapv")
+node = ""
+spriteOffset = Vector2(0, -12)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_y4eyu"]
+script = ExtResource("2_iy8ku")
+name = "Officer (Patrolling, armored , left)"
+symbol = "m"
+sprite = ExtResource("30_yg12c")
+node = ""
+spriteOffset = Vector2(0, -12)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_lqodf"]
+script = ExtResource("2_iy8ku")
+name = "Officer (Patrolling, armored, right)"
+symbol = "n"
+sprite = ExtResource("31_cwnb3")
+node = ""
+spriteOffset = Vector2(0, -12)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_ei4l0"]
+script = ExtResource("2_iy8ku")
+name = "Officer (Patrolling, TNT, left)"
+symbol = "o"
+sprite = ExtResource("32_g6211")
+node = ""
+spriteOffset = Vector2(0, -12)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_8mqw6"]
+script = ExtResource("2_iy8ku")
+name = "Officer (Patrolling, TNT, right)"
+symbol = "p"
+sprite = ExtResource("33_qm3ai")
+node = ""
+spriteOffset = Vector2(0, -12)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_lxi00"]
+script = ExtResource("2_iy8ku")
+name = "Officer (TNT, left)"
+symbol = "q"
+sprite = ExtResource("34_08srj")
+node = ""
+spriteOffset = Vector2(0, -12)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_g3ij6"]
+script = ExtResource("2_iy8ku")
+name = "Officer (TNT, right)"
+symbol = "r"
+sprite = ExtResource("35_ybnyc")
+node = ""
+spriteOffset = Vector2(0, -12)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_h51cj"]
+script = ExtResource("2_iy8ku")
+name = "Sheriff (Patrolling, left)"
+symbol = "s"
+sprite = ExtResource("36_2cpkg")
+node = ""
+spriteOffset = Vector2(0, -12)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_hxnsh"]
+script = ExtResource("2_iy8ku")
+name = "Sheriff (Patrolling, right)"
+symbol = "t"
+sprite = ExtResource("37_vmd2y")
+node = ""
+spriteOffset = Vector2(0, -12)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_xaclo"]
+script = ExtResource("2_iy8ku")
+name = "Sheriff (Left)"
+symbol = "u"
+sprite = ExtResource("38_v3ucb")
+node = ""
+spriteOffset = Vector2(0, -12)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_myqth"]
+script = ExtResource("2_iy8ku")
+name = "Sheriff (Right)"
+symbol = "v"
+sprite = ExtResource("39_fgk53")
+node = ""
+spriteOffset = Vector2(0, -12)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_kxdl6"]
+script = ExtResource("2_iy8ku")
+name = "Switch"
+symbol = "S"
+sprite = ExtResource("11_jdf7r")
+node = ""
+spriteOffset = Vector2(0, 0)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_qm3ai"]
+script = ExtResource("2_iy8ku")
+name = "Cinderblock"
+symbol = "I"
+sprite = ExtResource("40_wf06u")
+node = ""
+spriteOffset = Vector2(0, 0)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_08srj"]
+script = ExtResource("2_iy8ku")
+name = "Dynamite"
+symbol = "D"
+sprite = ExtResource("41_3obmn")
+node = ""
+spriteOffset = Vector2(0, 0)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_ybnyc"]
+script = ExtResource("2_iy8ku")
+name = "Gatling Gun (Right)"
+symbol = "G"
+sprite = ExtResource("42_snapv")
+node = ""
+spriteOffset = Vector2(0, 0)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_2cpkg"]
+script = ExtResource("2_iy8ku")
+name = "Gatling Gun (Left)"
+symbol = "A"
+sprite = ExtResource("43_yg12c")
+node = ""
+spriteOffset = Vector2(0, 0)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_vmd2y"]
+script = ExtResource("2_iy8ku")
+name = "Gatling Gun (Right, armed, officer team)"
+symbol = ">"
+sprite = ExtResource("44_cwnb3")
+node = ""
+spriteOffset = Vector2(0, 0)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_v3ucb"]
+script = ExtResource("2_iy8ku")
+name = "Gatling Gun (Left, armed, officer team)"
+symbol = "<"
+sprite = ExtResource("45_g6211")
+node = ""
+spriteOffset = Vector2(0, 0)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_fgk53"]
+script = ExtResource("2_iy8ku")
+name = "Barrel"
+symbol = "K"
+sprite = ExtResource("46_cwnb3")
+node = ""
+spriteOffset = Vector2(0, 0)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_cfyak"]
+script = ExtResource("2_iy8ku")
+name = "Crate"
+symbol = "B"
+sprite = ExtResource("47_g6211")
+node = ""
+spriteOffset = Vector2(0, 0)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_n7ydu"]
+script = ExtResource("2_iy8ku")
+name = "Secret Powerup Crate"
+symbol = "X"
+sprite = ExtResource("48_qm3ai")
+node = ""
+spriteOffset = Vector2(0, 0)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_4v7un"]
+script = ExtResource("2_iy8ku")
+name = "Powerup Crate (Random)"
+symbol = "?"
+sprite = ExtResource("49_08srj")
+node = ""
+spriteOffset = Vector2(0, 0)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_76c4h"]
+script = ExtResource("2_iy8ku")
+name = "Powerup Crate (x3 Ammo)"
+symbol = "1"
+sprite = ExtResource("49_08srj")
+flashSpriteOverlay = ExtResource("51_08srj")
+node = ""
+spriteOffset = Vector2(0, 0)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_yog74"]
+script = ExtResource("2_iy8ku")
+name = "Powerup Crate (Explosive Bullets)"
+symbol = "2"
+sprite = ExtResource("49_08srj")
+flashSpriteOverlay = ExtResource("49_qm3ai")
+node = ""
+spriteOffset = Vector2(0, 0)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_7hp7q"]
+script = ExtResource("2_iy8ku")
+name = "Powerup Crate (Double Jump)"
+symbol = "3"
+sprite = ExtResource("49_08srj")
+flashSpriteOverlay = ExtResource("52_vkp35")
+node = ""
+spriteOffset = Vector2(0, 0)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_nm38r"]
+script = ExtResource("2_iy8ku")
+name = "Powerup Crate (Shield)"
+symbol = "4"
+sprite = ExtResource("49_08srj")
+flashSpriteOverlay = ExtResource("53_4vnqq")
+node = ""
+spriteOffset = Vector2(0, 0)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_32ann"]
+script = ExtResource("2_iy8ku")
+name = "Powerup Crate (Super Punch)"
+symbol = "5"
+sprite = ExtResource("49_08srj")
+flashSpriteOverlay = ExtResource("54_lt4c8")
+node = ""
+spriteOffset = Vector2(0, 0)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_4l2cb"]
+script = ExtResource("2_iy8ku")
+name = "Powerup Crate (Quick Draw)"
+symbol = "6"
+sprite = ExtResource("49_08srj")
+flashSpriteOverlay = ExtResource("55_0v3hb")
+node = ""
+spriteOffset = Vector2(0, 0)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_rog3c"]
+script = ExtResource("2_iy8ku")
+name = "Powerup Crate (x1 Ammo)"
+symbol = "7"
+sprite = ExtResource("49_08srj")
+flashSpriteOverlay = ExtResource("56_ab65w")
+node = ""
+spriteOffset = Vector2(0, 0)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_a3v8l"]
+script = ExtResource("2_iy8ku")
+name = "Cash Barrel (4 Coins)"
+symbol = "N"
+sprite = ExtResource("46_cwnb3")
+flashSpriteOverlay = ExtResource("57_r4pd3")
+node = ""
+spriteOffset = Vector2(0, 0)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_kma1v"]
+script = ExtResource("2_iy8ku")
+name = "Cash Crate (4 Coins)"
+symbol = "$"
+sprite = ExtResource("57_r4pd3")
+node = ""
+spriteOffset = Vector2(0, 0)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_s6q3w"]
+script = ExtResource("2_iy8ku")
+name = "Chicken"
+symbol = "C"
+sprite = ExtResource("58_arh8e")
+node = ""
+spriteOffset = Vector2(0, 0)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_cax3w"]
+script = ExtResource("2_iy8ku")
+name = "Cow (Right)"
+symbol = "Y"
+sprite = ExtResource("59_h4xq4")
+node = ""
+spriteOffset = Vector2(24, -8)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_1o463"]
+script = ExtResource("2_iy8ku")
+name = "Cow (Left)"
+symbol = "W"
+sprite = ExtResource("60_3ob4h")
+node = ""
+spriteOffset = Vector2(16, -8)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_y4ebp"]
+script = ExtResource("2_iy8ku")
+name = "25% Cow (Random Direction)"
+symbol = "V"
+sprite = ExtResource("62_ab65w")
+flashSpriteOverlay = ExtResource("61_0v3hb")
+node = ""
+spriteOffset = Vector2(0, 0)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="Resource" id="Resource_guhhc"]
+script = ExtResource("2_iy8ku")
+name = "Random Object"
+symbol = "R"
+sprite = ExtResource("63_r4pd3")
+node = ""
+spriteOffset = Vector2(0, 0)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"
+
+[sub_resource type="LabelSettings" id="LabelSettings_gf0yr"]
+line_spacing = 0.0
+font = ExtResource("5_sygvd")
+font_size = 8
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0w46s"]
+texture = ExtResource("3_jauyc")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_sygvd"]
+sources/0 = SubResource("TileSetAtlasSource_0w46s")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ycee4"]
+size = Vector2(8, 8)
+
+[sub_resource type="LabelSettings" id="LabelSettings_sygvd"]
+font = ExtResource("5_sygvd")
+font_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_qogpg"]
+font = ExtResource("5_sygvd")
+font_size = 8
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n4oqg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("51_glggu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_fj2ah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_7e2i3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_lmkdr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="editor" type="Node2D" node_paths=PackedStringArray("camera")]
+script = ExtResource("1_vxwf6")
+camera = NodePath("camera")
+tilePage = Array[ExtResource("2_iy8ku")]([ExtResource("3_22aig"), SubResource("Resource_idxgr"), SubResource("Resource_2iahy"), SubResource("Resource_ycee4"), SubResource("Resource_jmeox"), SubResource("Resource_o3keb"), SubResource("Resource_276cq"), SubResource("Resource_re3rl"), SubResource("Resource_ye1uj"), SubResource("Resource_5xovq")])
+peoplePage = Array[ExtResource("2_iy8ku")]([SubResource("Resource_o6ouu"), SubResource("Resource_8c3sx"), SubResource("Resource_yrxpm"), SubResource("Resource_opd0o"), SubResource("Resource_mgvkx"), SubResource("Resource_vkp35"), SubResource("Resource_4vnqq"), SubResource("Resource_lt4c8"), SubResource("Resource_0v3hb"), SubResource("Resource_ab65w"), SubResource("Resource_r4pd3"), SubResource("Resource_arh8e"), SubResource("Resource_h4xq4"), SubResource("Resource_3ob4h"), SubResource("Resource_atcyj"), SubResource("Resource_tebac"), SubResource("Resource_y4eyu"), SubResource("Resource_lqodf"), SubResource("Resource_ei4l0"), SubResource("Resource_8mqw6"), SubResource("Resource_lxi00"), SubResource("Resource_g3ij6"), SubResource("Resource_h51cj"), SubResource("Resource_hxnsh"), SubResource("Resource_xaclo"), SubResource("Resource_myqth")])
+objectsPage = Array[ExtResource("2_iy8ku")]([SubResource("Resource_kxdl6"), SubResource("Resource_qm3ai"), SubResource("Resource_08srj"), SubResource("Resource_ybnyc"), SubResource("Resource_2cpkg"), SubResource("Resource_vmd2y"), SubResource("Resource_v3ucb"), SubResource("Resource_fgk53"), SubResource("Resource_cfyak"), SubResource("Resource_n7ydu"), SubResource("Resource_4v7un"), SubResource("Resource_76c4h"), SubResource("Resource_yog74"), SubResource("Resource_7hp7q"), SubResource("Resource_nm38r"), SubResource("Resource_32ann"), SubResource("Resource_4l2cb"), SubResource("Resource_rog3c"), SubResource("Resource_a3v8l"), SubResource("Resource_kma1v"), SubResource("Resource_s6q3w"), SubResource("Resource_cax3w"), SubResource("Resource_1o463"), SubResource("Resource_y4ebp"), SubResource("Resource_guhhc")])
+
+[node name="secrettext" type="Label" parent="."]
+offset_left = 19200.0
+offset_top = 232.0
+offset_right = 19456.0
+offset_bottom = 255.0
+text = "I COULDN'T AFFORD ANY MORE RAILS
+"
+label_settings = SubResource("LabelSettings_gf0yr")
+
+[node name="background" parent="." instance=ExtResource("2_jauyc")]
+
+[node name="camera" type="Camera2D" parent="."]
+position = Vector2(432, 120)
+limit_left = 0
+limit_top = -432
+limit_bottom = 432
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(0, -8)
+tile_set = SubResource("TileSet_sygvd")
+
+[node name="ColorRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.180392)
+offset_left = 48.0
+offset_top = -40.0
+offset_right = 43248.0
+offset_bottom = 232.0
+texture = ExtResource("4_0w46s")
+stretch_mode = 1
+
+[node name="placer" type="Area2D" parent="."]
+process_mode = 3
+z_index = 100
+position = Vector2(56, -32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="placer"]
+shape = SubResource("RectangleShape2D_ycee4")
+
+[node name="placer" type="Sprite2D" parent="placer"]
+modulate = Color(1, 1, 1, 0.607843)
+texture = ExtResource("3_xfh8a")
+
+[node name="ItemBar" type="CanvasLayer" parent="."]
+
+[node name="floors" type="Button" parent="ItemBar" groups=["group_button"]]
+offset_left = 1.0
+offset_top = 346.0
+offset_right = 65.0
+offset_bottom = 360.0
+theme = ExtResource("13_22aig")
+toggle_mode = true
+text = "FLOORS"
+
+[node name="people" type="Button" parent="ItemBar" groups=["group_button"]]
+offset_left = 68.0
+offset_top = 346.0
+offset_right = 132.0
+offset_bottom = 360.0
+theme = ExtResource("13_22aig")
+toggle_mode = true
+text = "PEOPLE"
+
+[node name="objects" type="Button" parent="ItemBar" groups=["group_button"]]
+offset_left = 135.0
+offset_top = 346.0
+offset_right = 199.0
+offset_bottom = 360.0
+theme = ExtResource("13_22aig")
+toggle_mode = true
+text = "OBJECTS"
+
+[node name="bg" type="Button" parent="ItemBar" groups=["group_button"]]
+visible = false
+offset_left = 202.0
+offset_top = 346.0
+offset_right = 288.0
+offset_bottom = 360.0
+theme = ExtResource("13_22aig")
+toggle_mode = true
+text = "BACKGROUND"
+
+[node name="save" type="Button" parent="ItemBar"]
+offset_left = 728.0
+offset_top = 346.0
+offset_right = 766.0
+offset_bottom = 360.0
+theme = ExtResource("13_22aig")
+text = "SAVE"
+
+[node name="load" type="Button" parent="ItemBar"]
+offset_left = 680.0
+offset_top = 346.0
+offset_right = 718.0
+offset_bottom = 360.0
+theme = ExtResource("13_22aig")
+text = "LOAD"
+
+[node name="description" type="Button" parent="ItemBar"]
+offset_left = 544.0
+offset_top = 346.0
+offset_right = 666.0
+offset_bottom = 360.0
+theme = ExtResource("13_22aig")
+text = "SET DESCRIPTION"
+
+[node name="clear" type="Button" parent="ItemBar"]
+offset_left = 456.0
+offset_top = 346.0
+offset_right = 530.0
+offset_bottom = 360.0
+theme = ExtResource("13_22aig")
+text = "CLEAR"
+
+[node name="bar" type="Control" parent="ItemBar"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="ItemBar/bar"]
+layout_mode = 0
+offset_top = 359.0
+offset_right = 768.0
+offset_bottom = 431.0
+
+[node name="ColorRect2" type="ColorRect" parent="ItemBar/bar"]
+layout_mode = 0
+offset_top = 360.0
+offset_right = 768.0
+offset_bottom = 432.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="ItemBar/bar"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 362.0
+offset_right = 96.0
+offset_bottom = 370.0
+text = "hello"
+label_settings = SubResource("LabelSettings_sygvd")
+
+[node name="item" type="Button" parent="ItemBar"]
+visible = false
+offset_left = 4.0
+offset_top = 374.0
+offset_right = 28.0
+offset_bottom = 398.0
+theme = ExtResource("13_idxgr")
+theme_override_fonts/font = ExtResource("14_idxgr")
+toggle_mode = true
+icon_alignment = 1
+script = ExtResource("15_2iahy")
+
+[node name="editorButtons" type="CanvasLayer" parent="."]
+
+[node name="ColorRect2" type="ColorRect" parent="editorButtons"]
+offset_top = 1.0
+offset_right = 768.0
+offset_bottom = 25.0
+
+[node name="ColorRect" type="ColorRect" parent="editorButtons"]
+offset_right = 768.0
+offset_bottom = 24.0
+color = Color(0, 0, 0, 1)
+
+[node name="switchButton_Horse" type="Button" parent="editorButtons"]
+offset_left = 648.0
+offset_top = 1.0
+offset_right = 762.0
+offset_bottom = 11.0
+tooltip_text = "WHERE DOES MR BLUE APPEAR?"
+theme = ExtResource("13_22aig")
+toggle_mode = true
+text = "MR BLUE: RIGHT"
+script = ExtResource("22_tapub")
+outcomes = Array[String](["MR BLUE: LEFT", "MR BLUE: RIGHT"])
+outcomeVars = Array[int]([0, 1])
+
+[node name="switchButton_Rider" type="Button" parent="editorButtons"]
+offset_left = 648.0
+offset_top = 13.0
+offset_right = 762.0
+offset_bottom = 23.0
+tooltip_text = "WHO WILL BE ON MR BLUE AT THE END OF THE LEVEL?"
+theme = ExtResource("13_22aig")
+toggle_mode = true
+text = "RIDER: MARIA"
+script = ExtResource("22_tapub")
+outcomes = Array[String](["RIDER: MARIA", "RIDER: BRAND", "RIDER: DODGER", "RIDER: OFFICER", "RIDER: SHERIFF"])
+outcomeVars = Array[int]([0, 1, 2, 3, 4])
+
+[node name="switchButton_Objective" type="Button" parent="editorButtons"]
+offset_left = 456.0
+offset_top = 5.0
+offset_right = 642.0
+offset_bottom = 21.0
+tooltip_text = "SET TO ANY IF UNSURE"
+theme = ExtResource("13_22aig")
+toggle_mode = true
+text = "OBJECTIVE: KILL SHERRIF"
+script = ExtResource("22_tapub")
+outcomes = Array[String](["OBJECTIVE: ANY", "OBJECTIVE: GET AMMO", "OBJECTIVE: HIT SWITCH", "OBJECTIVE: KILL SHERIFF", "OBJECTIVE: KILL EVERYONE"])
+outcomeVars = Array[int]([1, 5, 4, 3, 2])
+
+[node name="cashGoal" type="SpinBox" parent="editorButtons"]
+offset_left = 368.0
+offset_top = 3.0
+offset_right = 448.0
+offset_bottom = 11.0
+tooltip_text = "CASH GOAL"
+theme = ExtResource("13_22aig")
+max_value = 99.0
+rounded = true
+prefix = "CASH"
+
+[node name="time" type="SpinBox" parent="editorButtons"]
+offset_left = 368.0
+offset_top = 14.0
+offset_right = 448.0
+offset_bottom = 22.0
+tooltip_text = "TIME (IN SECONDS)"
+theme = ExtResource("13_22aig")
+max_value = 999.0
+value = 72.0
+rounded = true
+prefix = "TIME"
+
+[node name="star" type="SpinBox" parent="editorButtons"]
+offset_left = 280.0
+offset_top = 14.0
+offset_right = 360.0
+offset_bottom = 22.0
+tooltip_text = "TIME GOAL FOR TIME STAR"
+theme = ExtResource("13_22aig")
+max_value = 999.0
+value = 22.0
+rounded = true
+prefix = "STAR"
+
+[node name="ammo" type="SpinBox" parent="editorButtons"]
+offset_left = 280.0
+offset_top = 3.0
+offset_right = 360.0
+offset_bottom = 11.0
+tooltip_text = "STARTING AMMO"
+theme = ExtResource("13_22aig")
+max_value = 8.0
+rounded = true
+prefix = "AMMO"
+
+[node name="level name" type="LineEdit" parent="editorButtons"]
+offset_left = 6.0
+offset_top = 1.0
+offset_right = 272.0
+offset_bottom = 11.0
+theme = ExtResource("13_22aig")
+placeholder_text = "LEVEL NAME"
+max_length = 24
+
+[node name="level tip" type="LineEdit" parent="editorButtons"]
+offset_left = 6.0
+offset_top = 12.0
+offset_right = 272.0
+offset_bottom = 22.0
+tooltip_text = "LOWERCASE LETTERS MIGHT NOT SHOW UP PROPERLY INGAME"
+theme = ExtResource("13_22aig")
+placeholder_text = "LEVEL AUTHOR"
+max_length = 24
+
+[node name="saveType" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+
+[node name="ColorRect2" type="ColorRect" parent="saveType"]
+offset_left = 271.0
+offset_top = 127.0
+offset_right = 497.0
+offset_bottom = 265.0
+
+[node name="ColorRect3" type="ColorRect" parent="saveType"]
+offset_left = 272.0
+offset_top = 128.0
+offset_right = 496.0
+offset_bottom = 264.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="saveType"]
+offset_left = 287.0
+offset_top = 135.0
+offset_right = 479.0
+offset_bottom = 158.0
+text = "HOW DO YOU WANT TO SAVE?"
+label_settings = SubResource("LabelSettings_qogpg")
+
+[node name="cancel" type="Button" parent="saveType"]
+offset_left = 280.0
+offset_top = 200.0
+offset_right = 330.0
+offset_bottom = 210.0
+theme = ExtResource("13_idxgr")
+text = "CANCEL"
+
+[node name="trainlayout" type="Button" parent="saveType"]
+offset_left = 280.0
+offset_top = 176.0
+offset_right = 482.0
+offset_bottom = 186.0
+tooltip_text = "THIS WILL GENERATE SOME CODE THAT YOU CAN PUT INTO YOUR UFO 50 MOD
+WARNING: IT WONT BE ABLE TO GET LOADED IN THIS EDITOR!"
+theme = ExtResource("13_idxgr")
+text = "TRAINLAYOUT (UTMT MODS)"
+alignment = 0
+
+[node name="json" type="Button" parent="saveType"]
+offset_left = 280.0
+offset_top = 152.0
+offset_right = 482.0
+offset_bottom = 162.0
+theme = ExtResource("13_idxgr")
+text = "JSON (EDITOR, LOADER MOD)"
+
+[node name="horse_epic" type="AnimatedSprite2D" parent="saveType"]
+position = Vector2(448, 232)
+sprite_frames = SubResource("SpriteFrames_n4oqg")
+autoplay = "default"
+frame_progress = 0.169657
+speed_scale = 2.0
+
+[node name="loadType" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+
+[node name="ColorRect2" type="ColorRect" parent="loadType"]
+offset_left = 271.0
+offset_top = 127.0
+offset_right = 497.0
+offset_bottom = 193.0
+
+[node name="ColorRect3" type="ColorRect" parent="loadType"]
+offset_left = 272.0
+offset_top = 128.0
+offset_right = 496.0
+offset_bottom = 192.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="loadType"]
+offset_left = 287.0
+offset_top = 135.0
+offset_right = 479.0
+offset_bottom = 158.0
+text = "HOW DO YOU WANT TO LOAD?"
+label_settings = SubResource("LabelSettings_qogpg")
+
+[node name="cancel" type="Button" parent="loadType"]
+offset_left = 280.0
+offset_top = 170.0
+offset_right = 330.0
+offset_bottom = 180.0
+theme = ExtResource("13_idxgr")
+text = "CANCEL"
+
+[node name="jsonLoad" type="Button" parent="loadType"]
+offset_left = 280.0
+offset_top = 152.0
+offset_right = 328.0
+offset_bottom = 162.0
+theme = ExtResource("13_idxgr")
+text = "JSON"
+
+[node name="horse_epic" type="AnimatedSprite2D" parent="loadType"]
+position = Vector2(448, 168)
+sprite_frames = SubResource("SpriteFrames_n4oqg")
+autoplay = "default"
+frame_progress = 0.169657
+speed_scale = 2.0
+flip_h = true
+
+[node name="description" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+
+[node name="ColorRect2" type="ColorRect" parent="description"]
+offset_left = 271.0
+offset_top = 127.0
+offset_right = 497.0
+offset_bottom = 289.0
+
+[node name="ColorRect3" type="ColorRect" parent="description"]
+offset_left = 272.0
+offset_top = 128.0
+offset_right = 496.0
+offset_bottom = 288.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="description"]
+offset_left = 287.0
+offset_top = 135.0
+offset_right = 479.0
+offset_bottom = 158.0
+text = "LEVEL DESCRIPTION:"
+label_settings = SubResource("LabelSettings_qogpg")
+
+[node name="cancelDesc" type="Button" parent="description"]
+offset_left = 288.0
+offset_top = 256.0
+offset_right = 338.0
+offset_bottom = 266.0
+theme = ExtResource("13_idxgr")
+text = "CANCEL"
+
+[node name="TextEdit" type="TextEdit" parent="description"]
+offset_left = 280.0
+offset_top = 152.0
+offset_right = 488.0
+offset_bottom = 240.0
+theme = ExtResource("13_22aig")
+scroll_fit_content_width = true
+
+[node name="saveUtmtTxt" type="FileDialog" parent="."]
+process_mode = 3
+title = "Save Level Code"
+initial_position = 1
+access = 2
+filters = PackedStringArray("*.txt")
+use_native_dialog = true
+
+[node name="loadJson" type="FileDialog" parent="."]
+process_mode = 3
+auto_translate_mode = 1
+title = "Open a File"
+initial_position = 1
+ok_button_text = "Open"
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.json")
+use_native_dialog = true
+
+[node name="saveJson" type="FileDialog" parent="."]
+process_mode = 3
+auto_translate_mode = 1
+title = "Save JSON"
+initial_position = 1
+access = 2
+filters = PackedStringArray("*.json")
+use_native_dialog = true
+
+[connection signal="pressed" from="ItemBar/floors" to="." method="_on_floors_pressed"]
+[connection signal="pressed" from="ItemBar/people" to="." method="_on_people_pressed"]
+[connection signal="pressed" from="ItemBar/objects" to="." method="_on_objects_pressed"]
+[connection signal="pressed" from="ItemBar/bg" to="." method="_on_bg_pressed"]
+[connection signal="pressed" from="ItemBar/save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="ItemBar/load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="ItemBar/description" to="." method="_on_description_pressed"]
+[connection signal="pressed" from="ItemBar/clear" to="." method="_on_clear_pressed"]
+[connection signal="pressed" from="ItemBar/item" to="." method="_on_item_pressed"]
+[connection signal="text_changed" from="editorButtons/level name" to="." method="_on_level_name_text_changed"]
+[connection signal="text_changed" from="editorButtons/level tip" to="." method="_on_level_tip_text_changed"]
+[connection signal="pressed" from="saveType/cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="saveType/trainlayout" to="." method="_on_trainlayout_pressed"]
+[connection signal="pressed" from="saveType/json" to="." method="_on_json_pressed"]
+[connection signal="pressed" from="description/cancelDesc" to="." method="_on_cancel_desc_pressed"]
+[connection signal="text_changed" from="description/TextEdit" to="." method="_on_text_edit_text_changed"]
+[connection signal="dir_selected" from="saveUtmtTxt" to="." method="_on_save_utmt_txt_dir_selected"]
+[connection signal="file_selected" from="saveUtmtTxt" to="." method="_on_save_utmt_txt_file_selected"]
+[connection signal="file_selected" from="loadJson" to="." method="_on_load_json_file_selected"]
+[connection signal="file_selected" from="saveJson" to="." method="_on_save_json_file_selected"]

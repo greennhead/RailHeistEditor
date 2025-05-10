@@ -1,0 +1,123 @@
+[gd_scene load_steps=18 format=3 uid="uid://dhwhpi8j333w"]
+
+[ext_resource type="Script" uid="uid://dgd68egb4spfy" path="res://nodes/main_menu.gd" id="1_ahhaq"]
+[ext_resource type="Texture2D" uid="uid://bdyhplxkb8q2p" path="res://menu.png" id="1_urejr"]
+[ext_resource type="FontFile" uid="uid://dy4bbwefcwhsp" path="res://fonts/grimsoneFont.png" id="2_efjf0"]
+[ext_resource type="Theme" uid="uid://bcxe8gku6dbf3" path="res://gametheme.tres" id="3_efjf0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ahhaq"]
+font = ExtResource("2_efjf0")
+font_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_gnhuj"]
+line_spacing = 0.0
+font = ExtResource("2_efjf0")
+font_size = 8
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0mh3k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mfo80"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_twwqj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_os7cv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2sf87"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uoa0k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_anoic"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u5yy0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_huuev"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3hp8q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fqkfk"]
+
+[node name="mainMenu" type="Node2D"]
+script = ExtResource("1_ahhaq")
+
+[node name="Menu" type="Sprite2D" parent="."]
+position = Vector2(384, 216)
+texture = ExtResource("1_urejr")
+
+[node name="tip" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 240.0
+offset_bottom = 31.0
+text = "TIP: USE YOUR LX MOUSE ADDON!"
+label_settings = SubResource("LabelSettings_ahhaq")
+
+[node name="start" type="Button" parent="."]
+offset_left = 332.0
+offset_top = 240.0
+offset_right = 436.0
+offset_bottom = 256.0
+theme = ExtResource("3_efjf0")
+text = "START EDITOR"
+
+[node name="credits" type="Button" parent="."]
+offset_left = 332.0
+offset_top = 264.0
+offset_right = 436.0
+offset_bottom = 280.0
+theme = ExtResource("3_efjf0")
+text = "CREDITS"
+
+[node name="quit" type="Button" parent="."]
+offset_left = 332.0
+offset_top = 288.0
+offset_right = 436.0
+offset_bottom = 304.0
+theme = ExtResource("3_efjf0")
+text = "QUIT"
+
+[node name="creditsTab" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = -440.0
+offset_top = 144.0
+offset_right = -400.0
+offset_bottom = 184.0
+
+[node name="Label" type="Label" parent="creditsTab"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 256.0
+offset_right = 728.0
+offset_bottom = 286.0
+text = "EDITOR BY GREENHEAD352
+UFO 50 BY MOSSMOUTH
+RAIL HEIST TILE SPREADSHEET BY PHIL"
+label_settings = SubResource("LabelSettings_gnhuj")
+
+[node name="Button" type="Button" parent="creditsTab/Label"]
+layout_mode = 0
+offset_left = 287.0
+offset_top = 14.0
+offset_right = 337.0
+offset_bottom = 26.0
+theme = ExtResource("3_efjf0")
+theme_override_colors/font_color = Color(0, 0.415686, 0.705882, 1)
+theme_override_colors/font_focus_color = Color(0, 0.415686, 0.705882, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0mh3k")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_mfo80")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_twwqj")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_os7cv")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_2sf87")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_uoa0k")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_anoic")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_u5yy0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_huuev")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_3hp8q")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fqkfk")
+text = "(OPEN)"
+
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="creditsTab/Label/Button" to="." method="_on_button_pressed"]

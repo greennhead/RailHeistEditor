@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://b752xu305621w"]
+
+[ext_resource type="Script" uid="uid://bnjtwuhcjm2yd" path="res://resources/item.gd" id="1_povm3"]
+[ext_resource type="Texture2D" uid="uid://nocrkm88kxox" path="res://RailHeistSprites/s13_Floor_0.png" id="2_3gnff"]
+
+[resource]
+script = ExtResource("1_povm3")
+name = "Floor"
+symbol = "="
+sprite = ExtResource("2_3gnff")
+node = ""
+useBlockNode = true
+spriteOffset = Vector2(0, 0)
+metadata/_custom_type_script = "uid://bnjtwuhcjm2yd"

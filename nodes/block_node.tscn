@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://45udy1fgkhk1"]
+
+[ext_resource type="Texture2D" uid="uid://to7be0x8m7t4" path="res://RailHeistSprites/s13_FloorStud_0.png" id="1_11d3c"]
+[ext_resource type="Script" uid="uid://5piyhugha4jq" path="res://nodes/block_node.gd" id="1_vvvyn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e5tqn"]
+size = Vector2(16, 16)
+
+[sub_resource type="Animation" id="Animation_0gdex"]
+resource_name = "new_animation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("flashSprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.51, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_8535k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("flashSprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ur7mk"]
+_data = {
+&"RESET": SubResource("Animation_8535k"),
+&"new_animation": SubResource("Animation_0gdex")
+}
+
+[node name="blockNode" type="Area2D" groups=["block"]]
+script = ExtResource("1_vvvyn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_11d3c")
+
+[node name="flashSprite" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_e5tqn")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ur7mk")
+}
+autoplay = "new_animation"

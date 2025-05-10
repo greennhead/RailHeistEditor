@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=3 uid="uid://c16i087qtk46"]
+
+[ext_resource type="Texture2D" uid="uid://ds47v32t0ew0e" path="res://RailHeistSprites/s13_BGClouds_0.png" id="1_ayjv3"]
+[ext_resource type="Texture2D" uid="uid://babgtubyqjrkq" path="res://RailHeistSprites/s13_BGBackMountains_0.png" id="2_f0b77"]
+[ext_resource type="Texture2D" uid="uid://blccfr2e14w1w" path="res://RailHeistSprites/s13_BGFrontMountains_0.png" id="3_hfx46"]
+[ext_resource type="Texture2D" uid="uid://goh4dkhgruih" path="res://RailHeistSprites/s13_BGTrainTracks_0.png" id="4_hfx46"]
+
+[node name="background" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ParallaxBackground/ParallaxLayer2"]
+offset_left = -19200.0
+offset_top = -24.0
+offset_right = 19200.0
+offset_bottom = 184.0
+color = Color(0.219608, 0.0156863, 0.4, 1)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.05, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+offset_left = -19200.0
+offset_top = -88.0
+offset_right = 19200.0
+offset_bottom = -24.0
+texture = ExtResource("1_ayjv3")
+stretch_mode = 1
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(0, 16)
+motion_scale = Vector2(0.3, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer3"]
+offset_left = -19192.0
+offset_top = 72.0
+offset_right = 19208.0
+offset_bottom = 120.0
+texture = ExtResource("2_f0b77")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(0, 16)
+motion_scale = Vector2(0.5, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer4"]
+offset_left = -19200.0
+offset_top = 120.0
+offset_right = 19200.0
+offset_bottom = 216.0
+texture = ExtResource("3_hfx46")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(0, 16)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer5"]
+offset_left = -19200.0
+offset_top = 216.0
+offset_right = 19200.0
+offset_bottom = 272.0
+texture = ExtResource("4_hfx46")
+stretch_mode = 1
