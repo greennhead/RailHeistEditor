@@ -1,6 +1,6 @@
 ## A Level Editor for UFO 50's Rail Heist. 
 ### Made in Godot 4.4
-It can generate code that you can put in your rail heist mod, or alternatively you can save a json and use it with the rail heist level loader mod.
+It can generate code that you can put in your rail heist mod, or alternatively you can save a json and play it with the rail heist level loader mod.
 
 I in no way own UFO 50 or any of these assets.
 
@@ -10,6 +10,14 @@ I in no way own UFO 50 or any of these assets.
 - Mouse
 - Plus - Zoom in
 - Minus - Zoom out
+
+## Usage:
+Of Patch:
+- Patch your UFO 50 data.win using XDelta patcher. Rail heist should now have a "custom levels" tab. This will load all levels from AppData/Local/ufo50/RailHeistLevels
+Of Editor:
+- Launch RailHeistEditor.exe
+- Left click to place tiles, right click to erase them.
+
 
 ## Known jank/bugs:
 - Moving your mouse too fast will create gaps in tiles
