@@ -26,6 +26,7 @@ I in no way own UFO 50 or any of these assets.
 - Rarely you can put 2 tiles in one spot which can weird up the level data
 - Having both no casualties and all lawmen killed will have a weird string at the end of the level.
 - Barebones enough levels can sometimes crash from rail heist not knowing how to put the background tiles
+- In the level loader mod selecting custom levels and restarting game will prevent you from loading (as custom levels options disables saving/loading like a cheat code)
 
 ## Credits:
 - Mossmouth - UFO 50
